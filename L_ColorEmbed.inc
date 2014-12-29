@@ -21,7 +21,7 @@ LICENSE:
       distributed with this file, You can
       obtain one at
       http://mozilla.org/MPL/2.0/.
-      
+
 
 Natives:
 
@@ -255,7 +255,7 @@ stock WordsHighlight_SCMEx(text[], scmcol[9], hcol[9], words[][], bool:ignorecas
 
 		while(temp_Pos != -1)
 		{
-		    strins(temp_String, hcol, temp_Pos, sizeof(temp_String)); //{FF0000}This{FFFFFF} Function This Function
+		    strins(temp_String, hcol, temp_Pos, sizeof(temp_String)); 
 		    strins(temp_String, scmcol, temp_Pos + temp_WordLen + 8, sizeof(temp_String));
 		    temp_NewPos = temp_Pos + temp_WordLen + 16;
 		    temp_Pos = strfind(temp_String, words[i], ignorecase, temp_NewPos);
@@ -344,7 +344,7 @@ stock ColorEmbed_SCM(text[], rchar = 'x', size = sizeof(text))
 	new
 	    temp_String[144];
 	strcat((temp_String[0] = '\0', temp_String), text, sizeof(temp_String));
-	
+
 	for(new i = 0, j = strlen(temp_String); i< j; i++)
 	{
 	    if(temp_String[i] == '{' && i+1 < size)
@@ -396,4 +396,5 @@ stock ColorEmbed_Dialog(text[], rchar = 'x', size = sizeof(text))
 	}
 	return temp_String;
 }
+
 
